@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <img src="Images/bck.jpeg" alt="" id="back">
+        <div class="gallery">
+            <div>
+                <span><img src="Images/img1.jpeg" alt=""></span>
+                <span><img src="Images/img2.jpeg" alt=""></span>
+                <span><img src="Images/img3.jpeg" alt=""></span>
+                
+            </div>
+            <div>
+                <span><img src="Images/img4.jpeg" alt=""></span>
+                <span><img src="Images/img5.jpeg" alt=""></span>
+                <span><img src="Images/img6.jpeg" alt=""></span>
+    
+            </div>
+        </div>      
+        <img src="Images/nxt.jpeg" alt="" id="next">
+
+    </div>
+   
+
+    <script>
+
+        let scrollContainer = document.querySelector(".gallery");
+        let backBtn = document.getElementById("back");
+        let nextBtn = document.getElementById("next");
+
+       nextBtn.addEventListener("click", () => {
+           scrollContainer.style.scrollBehavior = "smooth";
+        scrollContainer.scrollLeft += 900;
+       }) ;
+
+       backBtn.addEventListener("click", () => {
+        scrollContainer.style.scrollBehavior = "smooth";
+        scrollContainer.scrollLeft -= 900;
+       }) ;
+
+    </script>
+</body>
+</html>
